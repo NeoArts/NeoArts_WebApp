@@ -1,0 +1,352 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&display=swap');
+
+/* -------------------------------------------------------------------------- */
+/*                                   Colors                                   */
+/* -------------------------------------------------------------------------- */
+
+$main-red: #DC2F2F;
+$black: #000000;
+$white: #FFFFFF;
+$whiteui: #F1F1F1;
+$blackui: #010101;
+
+/* -------------------------------------------------------------------------- */
+/*                               General styles                               */
+/* -------------------------------------------------------------------------- */
+
+html *{
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 900;
+}
+
+body{
+    background: #F1F1F1;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Menu Icon                                  */
+/* -------------------------------------------------------------------------- */
+
+/* ----------------------------- General styles ----------------------------- */
+
+.navbar-icon{
+    width: 32px;
+    padding: 0;
+    border: none;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+#navbar-icon-bar_top,
+#navbar-icon-bar_middle,
+#navbar-icon-bar_bottom{
+    width: 32px;
+    height: 2px;
+    border-radius: 20%;
+    background-color: $white;
+}
+
+#navbar-icon-bar_top{
+    margin-bottom: 8px;
+}
+
+#navbar-icon-bar_bottom{
+    margin-top: 8px;
+}
+
+/* ------------------------ Menu icon close animation ----------------------- */
+
+#navbar-icon-bar_top.close{
+    animation: menu-icon-shrink-reverse-right 300ms forwards, 200ms menu-icon-grow 300ms forwards;
+}
+#navbar-icon-bar_middle.close{
+    animation: menu-icon-grow 500ms forwards;
+}   
+#navbar-icon-bar_bottom.close{
+    animation: menu-icon-shrink-reverse-left 300ms forwards, 200ms menu-icon-grow 300ms forwards;
+}
+
+/* ------------------------ Menu icon open animation ------------------------ */
+
+#navbar-icon-bar_top.open{
+    animation: menu-icon-shrink 300ms forwards, 300ms menu-icon-close-expand-right 200ms forwards;
+}
+#navbar-icon-bar_middle.open{
+    animation: menu-icon-shrink 200ms forwards;
+} 
+#navbar-icon-bar_bottom.open{
+    animation: menu-icon-shrink 100ms forwards, 300ms menu-icon-close-expand-left 200ms forwards;
+}
+
+/* -------------------------- Menu Icon animations -------------------------- */
+
+@keyframes menu-icon-shrink{
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 0%;
+    }
+}
+
+@keyframes menu-icon-grow{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@keyframes menu-icon-shrink-reverse-right{
+    0%{
+        width: 50%;
+        transform: translate(4px,8px) rotate(45deg);
+    }
+    100%{
+        width: 0%;
+    }
+}
+
+@keyframes menu-icon-shrink-reverse-left{
+    0%{
+        width: 50%;
+        transform: translate(4px,-12px) rotate(-45deg);
+    }
+    100%{
+        width: 0%;
+    }
+}
+
+@keyframes menu-icon-close-expand-right{
+    0%{
+        transform: translate(4px,8px) rotate(45deg);
+    }
+    100%{
+        width: 50%;
+        transform: translate(4px,8px) rotate(45deg);
+    }
+}
+
+@keyframes menu-icon-close-expand-left{
+    0%{
+        transform: translate(4px,8px) rotate(45deg);
+    }
+    100%{
+        width: 50%;
+        transform: translate(4px,-12px) rotate(-45deg);
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   Buttons                                  */
+/* -------------------------------------------------------------------------- */
+
+.main-button{
+    display: inline-flex;
+    align-items: center;
+    color: $white;
+    background-color: $main-red;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: 0 0 5px #808080;
+}
+
+.main-button__icon{
+    background-color: $black;
+    padding: 1rem;
+    border-bottom-right-radius: 30%;
+    border-top-right-radius: 30%;
+    transition: all ease-in-out 200ms;
+}
+
+.main-button__text{
+    margin: 0px 20px;
+}
+
+.main-button:hover .main-button__icon{
+    padding-left: 1.5rem;
+    color: $white;
+}
+
+.main-button:hover .main-button__text{
+    text-shadow: 0 0 2px $white;
+    color: $white;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    Menu                                    */
+/* -------------------------------------------------------------------------- */
+
+.navbar{
+    width: 100%;
+    min-height: 4.25rem;
+    background-color: $black;
+    padding-top: 0.625rem !important;
+    padding-bottom: 0.625rem !important;
+}
+
+.navbar__brand-image{
+    width: 64px;
+}
+
+.navbar-collapse{
+    transition: all ease-in-out 200ms;
+}
+
+.navbar-collapse.show{
+    padding-top: 20px;
+}
+
+
+.menu__link{
+    margin: auto 0px;
+    margin-left: 30px;
+    color: $white;
+}
+
+.dropdown-menu{
+    position: absolute;
+    right: 0;
+    width: 200px !important;
+}
+
+.menu__dropdown{
+    margin-left: 30px;
+}
+
+.menu__dropdown .nav-link{
+    color: $white !important;
+}
+
+.menu__dropdown .menu__link{
+    color: $black;
+    display: block;
+    margin-right: 30px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Main section                                */
+/* -------------------------------------------------------------------------- */
+
+.main-section{
+    height: calc(100vh - 4.25rem);
+    margin-top: 4.25rem;
+    background: $whiteui;
+}
+
+.main-section__container{
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.col{
+    padding: 0;
+}
+
+.main-section__carousel-container{
+    padding: 0;
+    padding-left: 60px;
+}
+
+.carousel-container{
+    width: 100%;
+}
+
+.carousel-item{
+    height: 100%;
+    text-align: center;
+}
+
+.carousel__info{
+    margin-top: 20px;
+}
+
+.carousel.slide,
+.carousel-inner{
+    height: 100%;
+}
+
+.carousel__image{
+    width: 100%;
+}
+
+.main-section__title{
+    font-size: 4rem;
+    color: $blackui;
+    line-height: 1.2;
+}
+
+.main-section__description{
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Modificators                                 */
+/* -------------------------------------------------------------------------- */
+
+.h-container{
+    padding: 0% 8%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Media querys                               */
+/* -------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 1360px){
+    .main-section__carousel-container{
+        padding-left: 30px;
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .main-section{
+        height: auto;
+        padding-top: 3.125rem;
+        padding-bottom: 3.125rem;
+    }
+
+    .main-section__info{
+        margin-bottom: 40px;
+    }
+
+    .main-section__carousel-container{
+        padding-left: 0px;
+    }
+
+    .carousel__image{
+        width: 70%;
+    }
+
+}
+
+@media only screen and (max-width: 767px){
+    .menu__link{
+        margin-left: 0px;
+        padding: 0.5rem 0px;
+    }
+    .menu__dropdown{
+        margin-left: 0px;
+    }
+
+    .carousel__image{
+        width: 100%;
+    }
+}
