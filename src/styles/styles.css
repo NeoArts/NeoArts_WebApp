@@ -11964,6 +11964,12 @@ html * {
 
 a {
   text-decoration: none;
+  -webkit-transition: all ease-in-out 100ms;
+  transition: all ease-in-out 100ms;
+}
+
+a:hover {
+  color: #FFFFFF;
 }
 
 p {
@@ -11976,6 +11982,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 body {
   background: #F1F1F1;
+  scroll-behavior: smooth;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -12184,8 +12191,7 @@ body {
   background-color: #DC2F2F;
   border-bottom-right-radius: 8px;
   border-top-right-radius: 8px;
-  -webkit-box-shadow: 0 0 5px #808080;
-          box-shadow: 0 0 5px #808080;
+  border: none;
 }
 
 .main-button__icon {
@@ -12209,6 +12215,42 @@ body {
 .main-button:hover .main-button__text {
   text-shadow: 0 0 2px #FFFFFF;
   color: #FFFFFF;
+}
+
+.main-button.dark {
+  border: solid 1px #FFFFFF;
+  background: transparent;
+}
+
+.main-button.dark .main-button__icon {
+  background: white;
+  color: black;
+}
+
+.collapse-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  padding: 40px 0px;
+  -webkit-transition: all ease-in-out 200ms;
+  transition: all ease-in-out 200ms;
+}
+
+.collapse-button__icon {
+  margin-right: 10px;
+  -webkit-transition: all ease-in-out 200ms;
+  transition: all ease-in-out 200ms;
+}
+
+.collapse-button:hover {
+  margin-left: 10px;
+}
+
+.circle-button {
+  color: #F1F1F1;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -12245,6 +12287,11 @@ body {
   position: absolute;
   right: 0;
   width: 200px !important;
+  background: #000000;
+}
+
+.dropdown-menu a {
+  color: #FFFFFF !important;
 }
 
 .menu__dropdown {
@@ -12324,10 +12371,286 @@ body {
 }
 
 /* -------------------------------------------------------------------------- */
+/*                                Faqs Section                                */
+/* -------------------------------------------------------------------------- */
+.faqs-section__title {
+  color: white;
+  margin-bottom: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.faqs-section__grid-container {
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.faqs-section__item-info {
+  text-align: center;
+  border-radius: 12px;
+  padding: 20px;
+  background: #282627;
+}
+
+.faqs-section__icon {
+  width: 40%;
+  margin-bottom: 20px;
+}
+
+.faqs-section__more {
+  font-size: 1.375rem;
+}
+
+.faqs-section .card {
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 12px;
+}
+
+.faqs-section .card-header {
+  background: #282627;
+  color: white;
+}
+
+.faqs-section .card-body {
+  background: #1B1A1C;
+  color: white;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             Portafolio section                             */
+/* -------------------------------------------------------------------------- */
+.portafolio-section {
+  position: relative;
+}
+
+.portafolio-section__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0px 20px;
+}
+
+.portafolio-section__card {
+  text-align: left;
+  margin: 80px 0px;
+  color: #F1F1F1;
+  border: none;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+          box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.portafolio-section__card-image {
+  padding: 20px 40px;
+  height: 200px;
+  background: #F1F1F1;
+}
+
+.card__buttons {
+  float: right;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                            Testimonials section                            */
+/* -------------------------------------------------------------------------- */
+.testimonials-section__info {
+  color: #F1F1F1;
+  margin: auto 0px;
+}
+
+.testimonials-section__title {
+  font-size: 3.5rem;
+  line-height: 1.3;
+  margin-right: 20px;
+}
+
+.testimonials-section__button {
+  width: 80%;
+  margin-top: 20px;
+}
+
+.testimonials-section__testimonials {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.testimonials-section__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #F1F1F1;
+  margin-bottom: 20px;
+  border: solid 1px #F1F1F1;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.testimonials-section__card-image {
+  width: 64px;
+  margin-bottom: 10px;
+}
+
+.testimonials-section__star {
+  margin-right: 5px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               Pricing section                              */
+/* -------------------------------------------------------------------------- */
+.pricing-section__container {
+  text-align: center;
+}
+
+.pricing-section__cards-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.pricing-section__card {
+  text-align: center;
+}
+
+.pricing-section__card-header h3, .pricing-section__card-header .h3 {
+  line-height: 1.5;
+}
+
+.pricing-section__card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               Contact section                              */
+/* -------------------------------------------------------------------------- */
+.contact-section__title {
+  font-size: 3.5rem;
+  line-height: 1.2;
+}
+
+.contact-section .main-button {
+  margin-top: 20px;
+}
+
+.contact-section__info {
+  margin: auto 0;
+  color: #FFFFFF;
+}
+
+.contact-section__image {
+  width: 100%;
+  margin: auto 0;
+}
+
+.contact-section__form input {
+  border: none;
+  border-radius: 12px;
+  height: 40px;
+  margin-top: 20px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   Footer                                   */
+/* -------------------------------------------------------------------------- */
+.footer {
+  background: #000000;
+  position: relative;
+  margin-top: 35px;
+}
+
+.footer__container {
+  z-index: 1;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.footer__brand {
+  width: 128px;
+  margin-bottom: 20px;
+}
+
+.footer .menu a,
+.footer .menu__dropdown a {
+  color: #FFFFFF !important;
+}
+
+.footer .menu {
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer__social-link {
+  color: #FFFFFF;
+}
+
+.footer__social {
+  margin: 40px 0px;
+}
+
+.footer__social-icon {
+  margin: 0px 10px;
+}
+
+/* -------------------------------------------------------------------------- */
 /*                                Modificators                                 */
 /* -------------------------------------------------------------------------- */
 .h-container {
-  padding: 0% 8%;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.v-container {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.light-color {
+  color: #F1F1F1;
+}
+
+.skew-section {
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, rgba(220, 47, 47, 0.9)), to(rgba(220, 47, 47, 0.9))), url("../images/shape.png");
+  background-image: linear-gradient(to left, rgba(220, 47, 47, 0.9) 50%, rgba(220, 47, 47, 0.9)), url("../images/shape.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  -webkit-transform: skewY(-3deg);
+          transform: skewY(-3deg);
+}
+
+.skewed-section-dark {
+  -webkit-transform: skewY(-3deg) translateY(-50px);
+          transform: skewY(-3deg) translateY(-50px);
+  background: #000000;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.skew-container {
+  -webkit-transform: skewY(3deg);
+          transform: skewY(3deg);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -12354,6 +12677,44 @@ body {
   .carousel__image {
     width: 70%;
   }
+  .faqs-section__grid-container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .portafolio-section__container {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .portafolio-section__card {
+    margin: 10px 0px;
+  }
+  .testimonials-section__title {
+    margin-right: 0px;
+  }
+  .testimonials-section__button {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .pricing-section__container {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  .pricing-section__cards-grid {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    margin-top: 40px;
+  }
+  .contact-section__image-container {
+    text-align: center;
+  }
+  .contact-section__image {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  .dropdown-menu {
+    padding-left: 20px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -12366,6 +12727,27 @@ body {
   }
   .carousel__image {
     width: 100%;
+  }
+  .faqs-section__grid-container {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .portafolio-section__container {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .testimonials-section__testimonials {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .testimonials-section__card {
+    margin-bottom: 5px;
+  }
+  .footer .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=styles.css.map */
