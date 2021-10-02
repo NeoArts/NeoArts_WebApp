@@ -21,6 +21,7 @@
     "react-bootstrap": "^1.6.3",
     "react-dom": "^17.0.1",
     "react-icons": "^4.2.0",
+    "react-slick": "^0.28.1",
     "sass": "^1.41.0"
   },
   "devDependencies": {
