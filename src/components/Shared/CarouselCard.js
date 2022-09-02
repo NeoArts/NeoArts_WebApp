@@ -1,8 +1,5 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
-import ensafe from '../images/logo-ensafe.svg'
-import armala from '../images/logo-armala.svg'
-import artificio from '../images/logo-artificio.svg'
 import { FaGithubSquare } from 'react-icons/fa'
 import { VscLinkExternal } from 'react-icons/vsc'
 

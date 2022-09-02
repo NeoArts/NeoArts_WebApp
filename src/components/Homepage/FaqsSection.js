@@ -12,31 +12,31 @@ function FaqsSection() {
 
     return (
         <section className="faqs-section h-container v-container skew-section" id="faqs-section">
-            <div className="faqs-section__container skew-container">
+            <div className="faqs-section__container skew-container max-w-page m-auto">
                 <h1 className="faqs-section__title">Here you have four main reasons</h1>
                 <div className="faqs-section__grid-container">
                     <div className="faqs-section__item">
                         <div className="faqs-section__item-info light-color">
                             <IoMdPricetags className="faqs-section__icon" size='80px' />
-                            <p className="faqs-section__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, voluptate!</p>
+                            <p className="faqs-section__description">Una mayor visibilidad e incremento de clientes para mejorar tus ventas</p>
                         </div>
                     </div>
                     <div className="faqs-section__item">
                         <div className="faqs-section__item-info light-color">
                             <RiMoneyEuroCircleFill className="faqs-section__icon" size='80px' />
-                            <p className="faqs-section__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, voluptate!</p>
+                            <p className="faqs-section__description">Precios bajos, altos beneficios, mayores ventas y mejor visibilidad</p>
                         </div>
                     </div>
                     <div className="faqs-section__item">
                         <div className="faqs-section__item-info light-color">
                             <BiTargetLock className="faqs-section__icon" size='80px' />
-                            <p className="faqs-section__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, voluptate!</p>
+                            <p className="faqs-section__description">Mayor visibilidad al público para un mayor alcance de tus productos y servicios</p>
                         </div>
                     </div>
                     <div className="faqs-section__item">
                         <div className="faqs-section__item-info light-color">
                             <ImRocket className="faqs-section__icon" size='80px' />
-                            <p className="faqs-section__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, voluptate!</p>
+                            <p className="faqs-section__description">Sitios web optimizados y veloces para una mejor experiencia de usuario</p>
                         </div>
                     </div>
                 </div>

@@ -4,7 +4,7 @@ import { Card } from 'react-bootstrap'
 function PricingSection() {
     return (
         <section id="pricing-section" className="pricing-section h-container v-container">
-            <div className="pricing-section__container">
+            <div className="pricing-section__container max-w-page m-auto">
                 <h1 className="pricing-section__title">Pricing & plans</h1>
                 <p className="pricing-section__description">No aditional costs, no
                     <a href="#" style={{ color: "red" }} className="pricing-section__description-link"> fake marketing</a>

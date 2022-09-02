@@ -4,20 +4,22 @@ import ResponsiveDesign from '../../images/responsive-design.png'
 import PeopleDesigners from '../../images/people-designer.png'
 import BetterSeo from '../../images/best-seo.png'
 import { FaArrowRight } from 'react-icons/fa'
+import dictionary from '../../languages/en.json'
 
-function MainSection() {
+function MainSection(props) {
+    const language = props.language;
     return (
         <section className="main-section h-container" id="mainSection">
-            <Row noGutters className="main-section__container">
+            <Row noGutters className="main-section__container max-w-page m-auto">
                 <Col md={12} lg={6} className="col">
                     <div className="main-section__info">
-                        <h3 className="main-section__title">The best pages at the best prices</h3>
-                        <p className="main-section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe blanditiis officiis facilis inventore dolorum eaque laborum aperiam adipisci voluptate sunt?</p>
+                        <h3 className="main-section__title">{dictionary["0"][language]}</h3>
+                        <p className="main-section__description">{dictionary["1"][language]}</p>
                         <a href="#" className="main-button">
                             <div className="main-button__icon">
                                 <FaArrowRight />
                             </div>
-                            <p className="main-button__text">I want my web page now!</p>
+                            <p className="main-button__text">{dictionary["2"][language]}</p>
                         </a>
                     </div>
                 </Col>
@@ -27,8 +29,8 @@ function MainSection() {
                             <Carousel.Item>
                                 <img src={ResponsiveDesign} alt="responsive design icon" className="carousel__image" />
                                 <div className="carousel__info">
-                                    <h3>Responsive design</h3>
-                                    <p>A comfortable site for any device</p>
+                                    <h3>{dictionary["3"][language]}</h3>
+                                    <p>{dictionary["4"][language]}</p>
                                 </div>
                                 <Carousel.Caption>
                                 </Carousel.Caption>
@@ -36,8 +38,8 @@ function MainSection() {
                             <Carousel.Item>
                                 <img src={PeopleDesigners} alt="responsive design icon" className="carousel__image" />
                                 <div className="carousel__info">
-                                    <h3>The perfect look</h3>
-                                    <p>A design maded for your business</p>
+                                    <h3>{dictionary["5"][language]}</h3>
+                                    <p>{dictionary["6"][language]}</p>
                                 </div>
                                 <Carousel.Caption>
                                 </Carousel.Caption>
@@ -45,8 +47,8 @@ function MainSection() {
                             <Carousel.Item>
                                 <img src={BetterSeo} alt="responsive design icon" className="carousel__image" />
                                 <div className="carousel__info">
-                                    <h3>Better SEO</h3>
-                                    <p>The perfect configuration to improve your positioning</p>
+                                    <h3>{dictionary["7"][language]}</h3>
+                                    <p>{dictionary["8"][language]}</p>
                                 </div>
                                 <Carousel.Caption>
                                 </Carousel.Caption>

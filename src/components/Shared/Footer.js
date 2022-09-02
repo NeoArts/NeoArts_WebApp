@@ -1,7 +1,7 @@
 import React from 'react'
 import Menu from './Menu'
-import neoarts from '../images/neoarts-logo.svg'
-import { FaFacebookF, FaLinkedinIn, FaYoutube, FaInstagram } from 'react-icons/fa'
+import neoarts from '../../images/neoarts-logo.svg'
+import { FaFacebookF, FaLinkedinIn, FaWhatsapp, FaInstagram } from 'react-icons/fa'
 
 function Footer() {
     return (
@@ -21,10 +21,10 @@ function Footer() {
                         <FaLinkedinIn size="36px" className="footer__social-icon" />
                     </a>
                     <a href="#" className="footer__social-link">
-                        <FaYoutube size="36px" className="footer__social-icon" />
+                        <FaWhatsapp size="36px" className="footer__social-icon" />
                     </a>
                 </div>
-                <p className="footer__copyright"><span>&copy;</span> 2021 All rights reserved. NeoArts by Artificio</p>
+                <p className="footer__copyright"><span>&copy;</span> 2021 All rights reserved. NeoArts</p>
             </div>
         </footer>
     )

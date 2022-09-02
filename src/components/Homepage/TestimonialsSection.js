@@ -7,7 +7,7 @@ import { FaUserCircle } from 'react-icons/fa'
 function TestimonialsSection() {
     return (
         <section id="testimonials-section" className="testimonials-section h-container v-container skew-section">
-            <div className="testimonials-section__container v-container skew-container">
+            <div className="testimonials-section__container v-container skew-container max-w-page m-auto">
                 <Row>
                     <Col lg={6} md={12} className="testimonials-section__info">
                         <p className="testimonials-section__subtitle">Testimonials</p>
