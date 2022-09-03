@@ -15,11 +15,11 @@ export default function Home() {
     <div>
       <Layout language={language}>
         <MainSection language={language}/>
-        <FaqsSection />
-        <PortafolioSection />
-        <TestimonialsSection />
-        <PricingSection />
-        <ContactSection />
+        <FaqsSection language={language}/>
+        <PortafolioSection language={language}/>
+        <TestimonialsSection language={language}/>
+        <PricingSection language={language}/>
+        <ContactSection language={language}/>
       </Layout>
       <div className="language__banner">
           <span onClick={() => setLanguage(0)} className='language__banner-item' style={{marginRight: '15px'}}>es</span>

@@ -6,8 +6,11 @@ import artificio from '../../images/logo-artificio.svg'
 import { FaGithubSquare } from 'react-icons/fa'
 import { VscLinkExternal } from 'react-icons/vsc'
 import CarouselCard from '../Shared/CarouselCard'
+import dictionary from '../../languages/en.json'
 
-function PortafolioSection() {
+function PortafolioSection(props) {
+
+    const language = props.language;
 
     return (
         <section id="portafolio-section" className="portafolio-section h-container v-container">
@@ -55,7 +58,7 @@ function PortafolioSection() {
                     <Card.Body className="portafolio-section__card-info">
                         <Card.Title>Ensafe SAS</Card.Title>
                         <Card.Text>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum doloremque sint nisi quia officia alias, optio praesentium voluptatibus tempore vitae.
+                            {dictionary["24"][language]}
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer className="portafolio-section__card-footer">

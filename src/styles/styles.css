@@ -10589,7 +10589,7 @@ body {
 .language__banner {
   position: fixed;
   bottom: 0;
-  left: 0;
+  right: 0;
   background-color: #000000;
   width: 80px;
   height: 40px;
@@ -11003,6 +11003,9 @@ body {
   .menu__link {
     margin-left: 0px;
     padding: 0.5rem 0px;
+  }
+  .main-section__title {
+    font-size: 3rem;
   }
   .menu__dropdown {
     margin-left: 0px;
