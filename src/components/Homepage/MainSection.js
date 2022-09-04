@@ -36,7 +36,7 @@ function MainSection(props) {
                                 </Carousel.Caption>
                             </Carousel.Item>
                             <Carousel.Item>
-                                <img src={PeopleDesigners} alt="responsive design icon" className="carousel__image" />
+                                <img style={{marginTop: "50px"}} src={PeopleDesigners} alt="responsive design icon" className="carousel__image" />
                                 <div className="carousel__info">
                                     <h3>{dictionary["5"][language]}</h3>
                                     <p>{dictionary["6"][language]}</p>

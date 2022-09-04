@@ -2,28 +2,31 @@ import React from 'react'
 import { Container, Navbar } from 'react-bootstrap'
 import Menu from './Menu'
 import NeoArtsLogo from '../../images/neoarts-logo.svg'
+import { Link } from 'gatsby'
 
 const checkMenuState = () => {
-    var navbar = document.getElementById('navbar');
-    var top = document.getElementById('navbar-icon-bar_top');
-    var middle = document.getElementById('navbar-icon-bar_middle');
-    var bottom = document.getElementById('navbar-icon-bar_bottom');
-
-    if (navbar.classList.contains('show')) {
-        top.classList.remove('open');
-        middle.classList.remove('open');
-        bottom.classList.remove('open');
-        top.classList.add('close');
-        middle.classList.add('close');
-        bottom.classList.add('close');
-    }
-    else {
-        top.classList.add('open');
-        middle.classList.add('open');
-        bottom.classList.add('open');
-        top.classList.remove('close');
-        middle.classList.remove('close');
-        bottom.classList.remove('close');
+    if(document !== undefined && document !== null){
+        var navbar = document.getElementById('navbar');
+        var top = document.getElementById('navbar-icon-bar_top');
+        var middle = document.getElementById('navbar-icon-bar_middle');
+        var bottom = document.getElementById('navbar-icon-bar_bottom');
+    
+        if (navbar.classList.contains('show')) {
+            top.classList.remove('open');
+            middle.classList.remove('open');
+            bottom.classList.remove('open');
+            top.classList.add('close');
+            middle.classList.add('close');
+            bottom.classList.add('close');
+        }
+        else {
+            top.classList.add('open');
+            middle.classList.add('open');
+            bottom.classList.add('open');
+            top.classList.remove('close');
+            middle.classList.remove('close');
+            bottom.classList.remove('close');
+        }
     }
 }
 
@@ -33,10 +36,10 @@ function NavbarTop(props) {
 
     return (
         <Container fluid={true} className="navbar-background">
-                <Navbar expand="md" className="navbar fixed-top h-container">
-                    <Navbar.Brand href="#" className="navbar__brand">
+                <Navbar expand="lg" className="navbar fixed-top h-container">
+                    <Link to="/" className="navbar__brand">
                         <img src={NeoArtsLogo} alt="" className="navbar__brand-image" />
-                    </Navbar.Brand>
+                    </Link>
                     <Navbar.Toggle aria-controls="navbar" className="navbar-icon" onClick={checkMenuState}>
                         <div id="navbar-icon-bar_top"></div>
                         <div id="navbar-icon-bar_middle"></div>

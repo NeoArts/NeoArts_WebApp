@@ -4,11 +4,20 @@ import Footer from './Footer'
 import NavbarTop from './NavbarTop'
 
 function Layout({ children }) {
+    let child = children;
+
+    if(children[0] !== undefined) {
+        child = children[0];
+    }
+    else{
+        child = children;
+    }
+
     return (
         <>
-            <NavbarTop language={children[0].props.language}/>
+            <NavbarTop language={child.props.language}/>
             {children}
-            <Footer language={children[0].props.language}/>
+            <Footer language={child.props.language}/>
         </>
     )
 }
