@@ -3,11 +3,8 @@ import { Col, Row } from 'react-bootstrap'
 import { FaArrowRight } from 'react-icons/fa'
 import contact from '../../images/contact.png'
 import emailjs from 'emailjs-com'
-import dictionary from '../../languages/en.json'
 
-function ContactSection(props) {
-
-    const language = props.language;
+function ContactSection( {translator} ) {
 
     function sendEmail(event) {
         event.preventDefault()
@@ -39,8 +36,8 @@ function ContactSection(props) {
                     </Col>
                     <Col md={12} lg={6}>
                         <div className="contact-section__info">
-                            <h3 className="contact-section__title">{dictionary["29"][language]}</h3>
-                            <p className="contact-section__description">{dictionary["30"][language]}</p>
+                            <h3 className="contact-section__title">{translator.getTranslation("Still can't make up your mind?")}</h3>
+                            <p className="contact-section__description">{translator.getTranslation("Give us an email to send you a special discount coupon for your first plan")}</p>
                             <form className="contact-section__form" onSubmit={sendEmail}>
                                 <label htmlFor="email">Email</label>
                                 <input type="email" id="email" name="email" className="w-100 d-block" style={{paddingLeft: "10px"}} required />
@@ -48,7 +45,7 @@ function ContactSection(props) {
                                     <div className="main-button__icon">
                                         <FaArrowRight />
                                     </div>
-                                    <button className="main-button__text no-default">{dictionary["31"][language]}</button>
+                                    <button className="main-button__text no-default">{translator.getTranslation("I want my coupon!")}</button>
                                 </a>
                             </form>
                         </div>

@@ -15,9 +15,9 @@ function Layout({ children }) {
 
     return (
         <>
-            <NavbarTop language={child.props.language}/>
+            <NavbarTop translator={child.props.translator}/>
             {children}
-            <Footer language={child.props.language}/>
+            <Footer translator={child.props.translator}/>
         </>
     )
 }

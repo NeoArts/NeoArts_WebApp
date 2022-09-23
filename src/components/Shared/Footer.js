@@ -1,13 +1,8 @@
 import React from 'react'
-import Menu from './Menu'
 import neoarts from '../../images/neoarts-logo.svg'
 import { FaFacebookF, FaLinkedinIn, FaWhatsapp, FaInstagram } from 'react-icons/fa'
-import dictionary from '../../languages/en.json'
 
-function Footer(props) {
-
-    const language = props.language;
-
+function Footer( {translator} ) {
     return (
         <footer id="footer" className="footer">
             <div className="skewed-section-dark"></div>
@@ -28,7 +23,7 @@ function Footer(props) {
                         <FaWhatsapp size="36px" className="footer__social-icon" />
                     </a>
                 </div>
-                <p className="footer__copyright"><span>&copy;</span> 2021 {dictionary["32"][language]}. NeoArts</p>
+                <p className="footer__copyright"><span>&copy;</span> 2021 {translator.getTranslation("All rights reserved")}. NeoArts</p>
             </div>
         </footer>
     )

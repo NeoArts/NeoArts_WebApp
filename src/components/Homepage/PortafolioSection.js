@@ -1,26 +1,21 @@
-import React, { useState } from 'react'
-import { Card, Carousel } from 'react-bootstrap'
+import React from 'react'
+import { Card } from 'react-bootstrap'
 import ensafe from '../../images/logo-ensafe.svg'
 import armala from '../../images/logo-armala.svg'
-import artificio from '../../images/logo-artificio.svg'
-import { FaGithubSquare } from 'react-icons/fa'
+import draCarolina from '../../images/dra_carolina.svg'
 import { VscLinkExternal } from 'react-icons/vsc'
-import CarouselCard from '../Shared/CarouselCard'
-import dictionary from '../../languages/en.json'
 
-function PortafolioSection(props) {
-
-    const language = props.language;
+function PortafolioSection( {translator} ) {
 
     return (
         <section id="portafolio-section" className="portafolio-section h-container v-container">
             <div className="portafolio-section__container max-w-page m-auto" id="portafolio-carousel">
                 <Card bg="dark" className="portafolio-section__card">
-                    <Card.Img variant="top" src={artificio} className="portafolio-section__card-image" />
+                    <Card.Img variant="top" src={draCarolina} className="portafolio-section__card-image" />
                     <Card.Body className="portafolio-section__card-info">
-                        <Card.Title>Artificio</Card.Title>
+                        <Card.Title>Dra. Carolina Longlax</Card.Title>
                         <Card.Text>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum doloremque sint nisi quia officia alias, optio praesentium voluptatibus tempore vitae.
+                            {translator.getTranslation("Orthodontist specialist in the management of malocclusion, providing comprehensive oral health services, with high-quality interdisciplinary management, in early and adult ages")}
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer className="portafolio-section__card-footer">
@@ -28,7 +23,7 @@ function PortafolioSection(props) {
                             {/* <a href="#" className="circle-button">
                                 <FaGithubSquare size="40px" className="circle-button__icon" />
                             </a> */}
-                            <a href="#" className="circle-button">
+                            <a href="https://doctoracarolinalonglax.com.co/" target={"_blank"} className="circle-button">
                                 <VscLinkExternal size="40px" className="circle-button__icon" />
                             </a>
                         </div>
@@ -47,7 +42,7 @@ function PortafolioSection(props) {
                             {/* <a href="#" className="circle-button">
                                 <FaGithubSquare size="40px" className="circle-button__icon" />
                             </a> */}
-                            <a href="#" className="circle-button">
+                            <a href="#" target={"_blank"} className="circle-button">
                                 <VscLinkExternal size="40px" className="circle-button__icon" />
                             </a>
                         </div>
@@ -58,7 +53,7 @@ function PortafolioSection(props) {
                     <Card.Body className="portafolio-section__card-info">
                         <Card.Title>Ensafe SAS</Card.Title>
                         <Card.Text>
-                            {dictionary["24"][language]}
+                            {translator.getTranslation("Ensafe SAS is a company specialized in the supply of industrial equipment and personal protection products, in order to ensure the health and safety of people.")}
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer className="portafolio-section__card-footer">

@@ -1,25 +1,24 @@
 import React from 'react'
-import { Carousel, Col, Row } from 'react-bootstrap'
 import ResponsiveDesign from '../../images/responsive-design.png'
 import PeopleDesigners from '../../images/people-designer.png'
 import BetterSeo from '../../images/best-seo.png'
+import { Carousel, Col, Row } from 'react-bootstrap'
 import { FaArrowRight } from 'react-icons/fa'
-import dictionary from '../../languages/en.json'
 
-function MainSection(props) {
-    const language = props.language;
+function MainSection( {translator} ) {
+
     return (
         <section className="main-section h-container" id="mainSection">
             <Row noGutters className="main-section__container max-w-page m-auto">
                 <Col md={12} lg={6} className="col">
                     <div className="main-section__info">
-                        <h3 className="main-section__title">{dictionary["0"][language]}</h3>
-                        <p className="main-section__description">{dictionary["1"][language]}</p>
+                        <h3 className="main-section__title">{translator.getTranslation("The best pages at the best prices")}</h3>
+                        <p className="main-section__description">{translator.getTranslation("We are a group of students with great skills and knowledge in web development. We offer an affordable alternative for those who, like us, are making their way and want to make themselves known.")}</p>
                         <a href="#" className="main-button">
                             <div className="main-button__icon">
                                 <FaArrowRight />
                             </div>
-                            <p className="main-button__text">{dictionary["2"][language]}</p>
+                            <p className="main-button__text">{translator.getTranslation("I want my web page now!")}</p>
                         </a>
                     </div>
                 </Col>
@@ -29,8 +28,8 @@ function MainSection(props) {
                             <Carousel.Item>
                                 <img src={ResponsiveDesign} alt="responsive design icon" className="carousel__image" />
                                 <div className="carousel__info">
-                                    <h3>{dictionary["3"][language]}</h3>
-                                    <p>{dictionary["4"][language]}</p>
+                                    <h3>{translator.getTranslation("Responsive design")}</h3>
+                                    <p>{translator.getTranslation("A comfortable site for any device")}</p>
                                 </div>
                                 <Carousel.Caption>
                                 </Carousel.Caption>
@@ -38,8 +37,8 @@ function MainSection(props) {
                             <Carousel.Item>
                                 <img style={{marginTop: "50px"}} src={PeopleDesigners} alt="responsive design icon" className="carousel__image" />
                                 <div className="carousel__info">
-                                    <h3>{dictionary["5"][language]}</h3>
-                                    <p>{dictionary["6"][language]}</p>
+                                    <h3>{translator.getTranslation("The perfect look")}</h3>
+                                    <p>{translator.getTranslation("A design maded for your business")}</p>
                                 </div>
                                 <Carousel.Caption>
                                 </Carousel.Caption>
@@ -47,8 +46,8 @@ function MainSection(props) {
                             <Carousel.Item>
                                 <img src={BetterSeo} alt="responsive design icon" className="carousel__image" />
                                 <div className="carousel__info">
-                                    <h3>{dictionary["7"][language]}</h3>
-                                    <p>{dictionary["8"][language]}</p>
+                                    <h3>{translator.getTranslation("Better SEO")}</h3>
+                                    <p>{translator.getTranslation("The perfect configuration to improve your positioning")}</p>
                                 </div>
                                 <Carousel.Caption>
                                 </Carousel.Caption>

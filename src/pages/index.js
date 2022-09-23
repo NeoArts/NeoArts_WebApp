@@ -1,14 +1,14 @@
 import React from "react"
-import Switch from "react-bootstrap/esm/Switch"
-
-import Quote from "./Quote"
 import Main from "./Main"
 
-export default function Home() {
-  
-  return (
-    <div>
-        <Main/>
-    </div>
-  )
+class Home extends React.Component {
+  render() {
+    return (
+      <div>
+          <Main/>
+      </div>
+    )
+  }
 }
+
+export default Home;

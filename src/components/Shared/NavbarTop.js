@@ -30,9 +30,7 @@ const checkMenuState = () => {
     }
 }
 
-function NavbarTop(props) {
-
-    const language = props.language;
+function NavbarTop( {translator} ) {
 
     return (
         <Container fluid={true} className="navbar-background">
@@ -46,7 +44,7 @@ function NavbarTop(props) {
                         <div id="navbar-icon-bar_bottom"></div>
                     </Navbar.Toggle>
                     <Navbar.Collapse id="navbar">
-                        <Menu className="navbar__dropdown-menu ms-auto" language={language}/>
+                        <Menu className="navbar__dropdown-menu ms-auto" translator={translator}/>
                     </Navbar.Collapse>
                 </Navbar>
         </Container>

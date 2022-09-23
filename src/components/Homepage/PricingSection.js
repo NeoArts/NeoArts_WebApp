@@ -1,18 +1,15 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
-import dictionary from '../../languages/en.json'
 
-function PricingSection(props) {
-
-    const language = props.language;
+function PricingSection( {translator} ) {
 
     return (
         <section id="pricing-section" className="pricing-section h-container v-container">
             <div className="pricing-section__container max-w-page m-auto">
-                <h1 className="pricing-section__title">{dictionary["28"][language]}</h1>
-                <p className="pricing-section__description">{dictionary["34"][language]}
-                    <a href="#" style={{ color: "red" }} className="pricing-section__description-link"> {dictionary["35"][language]}</a>
-                    , {dictionary["36"][language]}
+                <h1 className="pricing-section__title">{translator.getTranslation("Pricing & plans")}</h1>
+                <p className="pricing-section__description">{translator.getTranslation("No aditional costs, no")}
+                    <a href="#" style={{ color: "red" }} className="pricing-section__description-link"> {translator.getTranslation("fake Marketing")}</a>
+                    , {translator.getTranslation("we are always transparent. Choose the best plan for you")}
                 </p>
                 <div className="pricing-section__cards-grid">
                     <Card className="pricing-section__card">

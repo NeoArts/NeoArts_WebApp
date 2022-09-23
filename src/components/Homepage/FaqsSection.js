@@ -5,40 +5,39 @@ import { IoMdPricetags } from 'react-icons/io'
 import { RiMoneyEuroCircleFill } from 'react-icons/ri'
 import { BiTargetLock } from 'react-icons/bi'
 import { Col, Collapse, Row } from 'react-bootstrap'
-import dictionary from '../../languages/en.json'
 
-function FaqsSection(props) {
 
-    const language = props.language;
+function FaqsSection( {translator} ) {
+
     const [isOpen, setOpen] = useState(false);
 
     return (
         <section className="faqs-section h-container v-container skew-section" id="faqs-section">
             <div className="faqs-section__container skew-container max-w-page m-auto">
-                <h1 className="faqs-section__title">{dictionary["33"][language]}</h1>
+                <h1 className="faqs-section__title">{translator.getTranslation("Here you have four main reasons")}</h1>
                 <div className="faqs-section__grid-container">
                     <div className="faqs-section__item">
                         <div className="faqs-section__item-info light-color">
                             <IoMdPricetags className="faqs-section__icon" size='80px' />
-                            <p className="faqs-section__description">{dictionary["19"][language]}</p>
+                            <p className="faqs-section__description">{translator.getTranslation("Greater visibility and increased customer acquisition to improve your sales")}</p>
                         </div>
                     </div>
                     <div className="faqs-section__item">
                         <div className="faqs-section__item-info light-color">
                             <RiMoneyEuroCircleFill className="faqs-section__icon" size='80px' />
-                            <p className="faqs-section__description">{dictionary["20"][language]}</p>
+                            <p className="faqs-section__description">{translator.getTranslation("Low prices, high profits, higher sales and improved visibility")}</p>
                         </div>
                     </div>
                     <div className="faqs-section__item">
                         <div className="faqs-section__item-info light-color">
                             <BiTargetLock className="faqs-section__icon" size='80px' />
-                            <p className="faqs-section__description">{dictionary["21"][language]}</p>
+                            <p className="faqs-section__description">{translator.getTranslation("Increased visibility to the public for greater reach of your products and services")}</p>
                         </div>
                     </div>
                     <div className="faqs-section__item">
                         <div className="faqs-section__item-info light-color">
                             <ImRocket className="faqs-section__icon" size='80px' />
-                            <p className="faqs-section__description">{dictionary["22"][language]}</p>
+                            <p className="faqs-section__description">{translator.getTranslation("Optimized and fast websites for a better user experience")}</p>
                         </div>
                     </div>
                 </div>
@@ -46,7 +45,7 @@ function FaqsSection(props) {
                     <div className="collapse-button__icon">
                         <FaArrowRight size='20px' style={isOpen ? { transform: "rotate(90deg)", transition: 'all ease-in-out 200ms' } : { transform: "rotate(0deg)", transition: 'all ease-in-out 200ms' }} />
                     </div>
-                    <p className="collapse-button__text">{dictionary["23"][language]}</p>
+                    <p className="collapse-button__text">{translator.getTranslation("Need more reasons?")}</p>
                 </button>
                 <Collapse in={isOpen}>
                     <div id="collapse-faqs">
