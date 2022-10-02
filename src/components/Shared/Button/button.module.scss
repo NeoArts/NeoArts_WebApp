@@ -1,0 +1,25 @@
+
+$main-red: #DC2F2F;
+$black: #000000;
+$white: #FFFFFF;
+$whiteui: #F1F1F1;
+$blackui: #010101;
+$main-dark: #282627;
+
+.button_primary{
+    background-color: $main-red;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: all ease-in-out 200ms;
+}
+
+.button_primary:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.button_primary:active{
+    transform: scale(1);
+}

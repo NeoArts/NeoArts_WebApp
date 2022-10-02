@@ -3,21 +3,12 @@ import '../../styles/styles.scss'
 import Footer from './Footer'
 import NavbarTop from './NavbarTop'
 
-function Layout({ children }) {
-    let child = children;
-
-    if(children[0] !== undefined) {
-        child = children[0];
-    }
-    else{
-        child = children;
-    }
-
+function Layout({ children, translator }) {
     return (
         <>
-            <NavbarTop translator={child.props.translator}/>
+            <NavbarTop translator={translator}/>
             {children}
-            <Footer translator={child.props.translator}/>
+            <Footer translator={translator}/>
         </>
     )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
+import Button from '../Shared/Button/Button'
 
 function PricingSection( {translator} ) {
 
@@ -14,50 +15,65 @@ function PricingSection( {translator} ) {
                 <div className="pricing-section__cards-grid">
                     <Card className="pricing-section__card">
                         <Card.Header className="pricing-section__card-header">
-                            <h3>Plan one</h3>
+                            <h3>{translator.getTranslation("Plan Social Media")}</h3>
                         </Card.Header>
                         <Card.Body className="pricing-section__card-body">
                             <ul>
-                                <li>Lorem, ipsum dolor.</li>
-                                <li>Lorem, ipsum dolor.</li>
-                                <li>Lorem, ipsum dolor.</li>
-                                <li>Lorem, ipsum dolor.</li>
+                                <li>{translator.getTranslation("The best configuration for Facebook and Instagram")}</li><hr/>
+                                <li>{translator.getTranslation("9 persinalized publications")}</li><hr/>
+                                <li>{translator.getTranslation("Two featured stories")}</li><hr/>
+                                <li>{translator.getTranslation("Custom icons")}</li><hr/>
+                                <li>{translator.getTranslation("Logo creation/vectorization")}</li><hr/>
+                                <li>{translator.getTranslation("Design with a perfect corporate identity")}</li>
                             </ul>
                         </Card.Body>
                         <Card.Footer className="pricing-section__card-footer">
-                            <h4>400,000 COP</h4>
+                            <h4>350,000 COP</h4>
+                            <Button text={translator.getTranslation("I Want This!")} type={"button_primary"}/>
                         </Card.Footer>
                     </Card>
                     <Card className="pricing-section__card">
                         <Card.Header className="pricing-section__card-header">
-                            <h3>Plan one</h3>
+                            <h3>{translator.getTranslation("Plan All In One")}</h3>
                         </Card.Header>
                         <Card.Body className="pricing-section__card-body">
                             <ul>
-                                <li>Lorem, ipsum dolor.</li>
-                                <li>Lorem, ipsum dolor.</li>
-                                <li>Lorem, ipsum dolor.</li>
-                                <li>Lorem, ipsum dolor.</li>
+                                <li>{translator.getTranslation("Greater presence in the Internet world")}</li><hr/>
+                                <li>{translator.getTranslation("Best Contact Methods")}</li><hr/>
+                                <li>{translator.getTranslation("Whatsapp chat configuration and interconnection")}</li><hr/>
+                                <li>{translator.getTranslation("Basic SEO for google positioning")}</li><hr/>
+                                <li>{translator.getTranslation("Custom logos and icons")}</li><hr/>
+                                <li>{translator.getTranslation("Responsive design, your web in all devices")}</li><hr/>
+                                <li>{translator.getTranslation("Optimization for a better user experience")}</li><hr/>
+                                <li>{translator.getTranslation("9 persinalized publications")}</li><hr/>
+                                <li>{translator.getTranslation("Two featured stories")}</li><hr/>
+                                <li>{translator.getTranslation("Design with a perfect corporate identity")}</li>
                             </ul>
                         </Card.Body>
                         <Card.Footer className="pricing-section__card-footer">
-                            <h4>1'000,000 COP</h4>
+                            <h4>870,000 COP</h4>
+                            <Button text={translator.getTranslation("I Want This!")} type={"button_primary"}/>
                         </Card.Footer>
                     </Card>
                     <Card className="pricing-section__card">
                         <Card.Header className="pricing-section__card-header">
-                            <h3>Plan one</h3>
+                            <h3>{translator.getTranslation("Plan Web Page")}</h3>
                         </Card.Header>
                         <Card.Body className="pricing-section__card-body">
                             <ul>
-                                <li>Lorem, ipsum dolor.</li>
-                                <li>Lorem, ipsum dolor.</li>
-                                <li>Lorem, ipsum dolor.</li>
-                                <li>Lorem, ipsum dolor.</li>
+                                <li>{translator.getTranslation("Connection with social media")}</li><hr/>
+                                <li>{translator.getTranslation("Contact form")}</li><hr/>
+                                <li>{translator.getTranslation("Whatsapp chat connection")}</li><hr/>
+                                <li>{translator.getTranslation("Privacy policy section")}</li><hr/>
+                                <li>{translator.getTranslation("Basic SEO for google positioning")}</li><hr/>
+                                <li>{translator.getTranslation("Custom logos and icons")}</li><hr/>
+                                <li>{translator.getTranslation("Responsive design, your web in all devices")}</li><hr/>
+                                <li>{translator.getTranslation("Optimization for a better user experience")}</li>
                             </ul>
                         </Card.Body>
                         <Card.Footer className="pricing-section__card-footer">
-                            <h4>1'500,000 COP</h4>
+                            <h4>560,000 COP</h4>
+                            <Button text={translator.getTranslation("I Want This!")} type={"button_primary"}/>
                         </Card.Footer>
                     </Card>
                 </div>

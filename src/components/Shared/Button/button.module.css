@@ -1,0 +1,17 @@
+.button_primary {
+  background-color: #DC2F2F;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+  transition: all ease-in-out 200ms;
+}
+
+.button_primary:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+.button_primary:active {
+  transform: scale(1);
+}/*# sourceMappingURL=button.module.css.map */
