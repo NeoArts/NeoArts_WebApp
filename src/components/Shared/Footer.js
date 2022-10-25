@@ -16,7 +16,7 @@ function Footer( {translator} ) {
                     <a target={"_blank"} href="https://www.instagram.com/neoarts.co/" className="footer__social-link">
                         <FaInstagram size="36px" className="footer__social-icon" />
                     </a>
-                    <a target={"_blank"} href="#" className="footer__social-link">
+                    <a target={"_blank"} href="https://www.linkedin.com/company/neoarts/" className="footer__social-link">
                         <FaLinkedinIn size="36px" className="footer__social-icon" />
                     </a>
                     <a target={"_blank"} href="https://wa.me/573105746050" className="footer__social-link">

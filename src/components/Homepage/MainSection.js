@@ -14,7 +14,7 @@ function MainSection( {translator} ) {
                     <div className="main-section__info">
                         <h3 className="main-section__title">{translator.getTranslation("The best pages at the best prices")}</h3>
                         <p className="main-section__description">{translator.getTranslation("We are a group of students with great skills and knowledge in web development. We offer an affordable alternative for those who, like us, are making their way and want to make themselves known.")}</p>
-                        <a href="#" className="main-button">
+                        <a href="#contact-section" className="main-button">
                             <div className="main-button__icon">
                                 <FaArrowRight />
                             </div>

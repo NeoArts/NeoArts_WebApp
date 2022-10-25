@@ -8,12 +8,15 @@ function ContactSection( {translator} ) {
 
     function sendEmail(event) {
         event.preventDefault()
-    
+        let templateParams = {
+          email: event.target.email.value
+        }
+
         emailjs
-            .sendForm(
-                "service_v2ykj32",
+            .send(
+                "service_rin4y9m",
                 "template_gwwcapk",
-                event.target,
+                templateParams,
                 "8A67iZ0U9y_nny9Wq"
             )
             .then(

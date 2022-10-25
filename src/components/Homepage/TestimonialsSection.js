@@ -13,7 +13,7 @@ function TestimonialsSection( {translator} ) {
                         <p className="testimonials-section__subtitle">{translator.getTranslation("What people think about us")}</p>
                         <h3 className="testimonials-section__title">{translator.getTranslation("We are happy if you are")}</h3>
                         <p className="testimonials-section__description">{translator.getTranslation("See all")}</p>
-                        <Link className="btn btn-outline-light btn-lg testimonials-section__button">{translator.getTranslation("Pricing & plans")}</Link>
+                        <a href='#pricing-section' className="btn btn-outline-light btn-lg testimonials-section__button">{translator.getTranslation("Pricing & plans")}</a>
                     </Col>
                     <Col lg={6} md={12} className="testimonials-section__testimonials">
                         <div className="testimonials-section__card">
