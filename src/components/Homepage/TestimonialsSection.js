@@ -36,7 +36,7 @@ function TestimonialsSection( {translator} ) {
                                 <FaUserCircle size="64px" />
                             </div>
                             <div className="testimonials-section__card-info">
-                                <p className="testimonials-section__card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, vel pariatur! Sit, Lorem ipsum dolor sit.</p>
+                                <p className="testimonials-section__card-description">{translator.getTranslation("The work team was very proactive and purposeful, they adequately and correctly attended to my requests. The service was personalized and highly satisfactory")}.</p>
                                 <div className="testimonials-section__star-container">
                                     <BsStarFill className="testimonials-section__star" />
                                     <BsStarFill className="testimonials-section__star" />

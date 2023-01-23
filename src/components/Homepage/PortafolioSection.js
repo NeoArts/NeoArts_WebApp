@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import ensafe from '../../images/logo-ensafe.svg'
-import armala from '../../images/logo-armala.svg'
+import vic from '../../images/vic.png'
 import draCarolina from '../../images/dra_carolina.svg'
 import { VscLinkExternal } from 'react-icons/vsc'
 
@@ -9,6 +9,7 @@ function PortafolioSection( {translator} ) {
 
     return (
         <section id="portafolio-section" className="portafolio-section h-container v-container">
+            <h1 className="portafolio-section__title">{translator.getTranslation("They trusted in us")}</h1>
             <div className="portafolio-section__container max-w-page m-auto" id="portafolio-carousel">
                 <Card bg="dark" className="portafolio-section__card">
                     <Card.Img variant="top" src={draCarolina} className="portafolio-section__card-image" />
@@ -30,11 +31,11 @@ function PortafolioSection( {translator} ) {
                     </Card.Footer>
                 </Card>
                 <Card bg="dark" className="portafolio-section__card">
-                    <Card.Img variant="top" src={armala} className="portafolio-section__card-image" />
+                    <Card.Img variant="top" src={vic} className="portafolio-section__card-image" />
                     <Card.Body className="portafolio-section__card-info">
-                        <Card.Title>Armalá</Card.Title>
+                        <Card.Title>VIC Model</Card.Title>
                         <Card.Text>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum doloremque sint nisi quia officia alias, optio praesentium voluptatibus tempore vitae.
+                          {translator.getTranslation("Laura Victoria is a model with more than 4 years of experience in the field of modeling, participant in brand modeling for medicaline and working as an artistic model with independent photographers")}
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer className="portafolio-section__card-footer">
@@ -42,7 +43,7 @@ function PortafolioSection( {translator} ) {
                             {/* <a href="#" className="circle-button">
                                 <FaGithubSquare size="40px" className="circle-button__icon" />
                             </a> */}
-                            <a href="#" target={"_blank"} className="circle-button">
+                            <a href="https://neoarts.github.io/VIC/" target={"_blank"} className="circle-button">
                                 <VscLinkExternal size="40px" className="circle-button__icon" />
                             </a>
                         </div>

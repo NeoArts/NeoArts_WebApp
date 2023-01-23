@@ -41,12 +41,12 @@ function FaqsSection( {translator} ) {
                         </div>
                     </div>
                 </div>
-                <button className="collapse-button" onClick={() => setOpen(!isOpen)} aria-controls="collapse-faqs" aria-expanded={isOpen}>
+                {/* <button className="collapse-button" onClick={() => setOpen(!isOpen)} aria-controls="collapse-faqs" aria-expanded={isOpen}>
                     <div className="collapse-button__icon">
                         <FaArrowRight size='20px' style={isOpen ? { transform: "rotate(90deg)", transition: 'all ease-in-out 200ms' } : { transform: "rotate(0deg)", transition: 'all ease-in-out 200ms' }} />
                     </div>
                     <p className="collapse-button__text">{translator.getTranslation("Need more reasons?")}</p>
-                </button>
+                </button> */}
                 <Collapse in={isOpen}>
                     <div id="collapse-faqs">
                         <Row>

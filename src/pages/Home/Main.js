@@ -11,7 +11,7 @@ import MainSection from '../../components/Homepage/MainSection'
 function Main() {
 
     
-    const [language, setLanguage] = useState("en");
+    const [language, setLanguage] = useState("es");
     const translator = new Translator( {language: language} );
 
     return (

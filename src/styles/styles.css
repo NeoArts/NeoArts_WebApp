@@ -10566,6 +10566,19 @@ body {
   margin-top: 30px;
 }
 
+.button_primary {
+  display: block;
+  width: 100%;
+  height: 45px;
+  border-radius: 12px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background-color: #DC2F2F;
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                    Menu                                    */
 /* -------------------------------------------------------------------------- */
@@ -10719,10 +10732,18 @@ body {
 }
 
 .faqs-section__item-info {
+  min-height: 260px;
+}
+
+.faqs-section__item-info {
   text-align: center;
   border-radius: 12px;
   padding: 20px;
   background: #282627;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .faqs-section__icon {
@@ -10761,6 +10782,11 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+
+.portafolio-section__title {
+  margin-top: 40px;
+  text-align: center;
 }
 
 .portafolio-section__card {

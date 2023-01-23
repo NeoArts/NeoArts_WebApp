@@ -28,8 +28,7 @@ function PricingSection( {translator} ) {
                             </ul>
                         </Card.Body>
                         <Card.Footer className="pricing-section__card-footer">
-                            <h4>350,000 COP</h4>
-                            <Button text={translator.getTranslation("I Want This!")} type={"button_primary"}/>
+                          <a target={"_blank"} href='https://wa.me/573105746050?text=Hola%20NeoArts!%20Quisiera%20preguntar%20por%20el%20plan%20de%20Redes%20Sociales' className="button_primary">{translator.getTranslation("I Want This!")}</a>
                         </Card.Footer>
                     </Card>
                     <Card className="pricing-section__card">
@@ -51,8 +50,7 @@ function PricingSection( {translator} ) {
                             </ul>
                         </Card.Body>
                         <Card.Footer className="pricing-section__card-footer">
-                            <h4>870,000 COP</h4>
-                            <Button text={translator.getTranslation("I Want This!")} type={"button_primary"}/>
+                          <a target={"_blank"} href='https://wa.me/573105746050?text=Hola%20NeoArts!%20Quisiera%20preguntar%20por%20el%20plan%20de%20Página%20Web%20y%20Redes%20sociales' className="button_primary">{translator.getTranslation("I Want This!")}</a>
                         </Card.Footer>
                     </Card>
                     <Card className="pricing-section__card">
@@ -72,8 +70,7 @@ function PricingSection( {translator} ) {
                             </ul>
                         </Card.Body>
                         <Card.Footer className="pricing-section__card-footer">
-                            <h4>560,000 COP</h4>
-                            <Button text={translator.getTranslation("I Want This!")} type={"button_primary"}/>
+                            <a target={"_blank"} href='https://wa.me/573105746050?text=Hola%20NeoArts!%20Quisiera%20preguntar%20por%20el%20plan%20de%20Página%20Web' className="button_primary">{translator.getTranslation("I Want This!")}</a>
                         </Card.Footer>
                     </Card>
                 </div>

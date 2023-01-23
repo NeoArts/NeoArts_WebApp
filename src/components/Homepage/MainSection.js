@@ -12,7 +12,7 @@ function MainSection( {translator} ) {
             <Row noGutters className="main-section__container max-w-page m-auto">
                 <Col md={12} lg={6} className="col">
                     <div className="main-section__info">
-                        <h3 className="main-section__title">{translator.getTranslation("The best pages at the best prices")}</h3>
+                        <h3 className="main-section__title">{translator.getTranslation("The best software solutions at the best prices")}</h3>
                         <p className="main-section__description">{translator.getTranslation("We are a group of students with great skills and knowledge in web development. We offer an affordable alternative for those who, like us, are making their way and want to make themselves known.")}</p>
                         <a href="#contact-section" className="main-button">
                             <div className="main-button__icon">
