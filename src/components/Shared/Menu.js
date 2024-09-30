@@ -11,10 +11,10 @@ function Menu( {className, translator} ) {
             <Link to="/#pricing-section" className="menu__link">{translator.getTranslation("Pricing")}</Link>
             <Link to="/#contact-section" className="menu__link">{translator.getTranslation("Contact")}</Link>
             <NavDropdown title={translator.getTranslation("About us")} id="navbarDropDown" className="menu__dropdown">
-                <Link to="#" className="menu__link">{translator.getTranslation("Who we are?")}</Link>
-                <Link to="#" className="menu__link">{translator.getTranslation("privacy policy")}</Link>
-                <Link to="#" className="menu__link">{translator.getTranslation("Mission & vision")}</Link>
-                <Link to="#" className="menu__link">{translator.getTranslation("our philosophy")}</Link>
+                <Link to="/whoweare" className="menu__link">{translator.getTranslation("Who we are?")}</Link>
+                <Link to="/privacy" className="menu__link">{translator.getTranslation("privacy policy")}</Link>
+                <Link to="/mission&vision" className="menu__link">{translator.getTranslation("Mission & vision")}</Link>
+                {/* <Link to="#" className="menu__link">{translator.getTranslation("our philosophy")}</Link> */}
             </NavDropdown>
         </Nav>
     )
